@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spyro</title>
+    <link rel="icon" type="image/png" href="./images/spyrologo.png">
+    <link rel="stylesheet" type="text/css" href="./app/static/template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="on">
+    <div class="loading" id="loading-box">
+        <div class="loading-item">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <main class="main">
+        <!-- navbar -->
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar-nav">
+                    <div class="navbar-brand">
+                        <img src="https://cdn.discordapp.com/attachments/1176631274702639195/1176889250051014776/image.png?ex=65708286&is=655e0d86&hm=b0c052452eddd833430acfb11ebfdfc37560102e325710f8d133e57f570f1a1a&" alt="Logo">
+                        <span class="navbar-brand-txt"><a class="txt-bold type-1" href="/">Spyro</a></span>
+                    </div>
+                    <div class="navs" id="navs">
+                        <div class="navs-item notbtn"><a href="#" class="txt-uppercase">Invite</a></div>
+                        <div class="navs-item notbtn"><a href="#" class="txt-uppercase">Dashboard</a></div>
+                        <div class="navs-item"><a href="/login"><button class="btn txt-uppercase shadow-sm">Login</button></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- navbar end -->
+
+        <!-- jumbotron -->
+        <div class="jumbotron">
+            <div class="container">
+                <div class="jumbotron-items">
+                    <div class="jumbotron-item">
+                        <p class="jumbotron-d">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        <div class="jumbotron-buttons text-center ">
+                            <button class="btn" onclick="location.href='#features'">Features</button>
+                            <button class="btn blue" onclick="location.href='#'">Invite</button>
+                        </div>
+                    </div>
+                    <div class="jumbotron-item">
+                        <img src="./imgages/spyrologo.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jumbotron end -->
+    </main>
+
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html> 
+<style>
+    :root {
+	/* 
+	* this is primary color, applied on:
+	* background, underline
+	 */
+	--primary: #121212;
+	--primary-disabled: #11A8FF;
+	/*
+	* this is secondary color, applied on:
+	* text, border
+	*/
+	--secondary: white;
+	--secondary-disabled: #ababab;
+	/*
+	* this is third color, applied on:
+	* button, 
+	*/
+	--third: #11A8FF;
+	--third-disabled: #11A8FF;
+	/*
+	* other colors, used on random object.
+	*/
+	--o1: #11A8FF;
+	--o1-disabled: #11A8FF;
+}  
+/*
+* font - from google font
+* https://fonts.google.com/
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	color: var(--secondary);
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+html, body {
+	scroll-behavior: smooth;
+
+}
+
+body {
+    background: linear-gradient(to right, #121212, #262626);
+}
+
+body.on {
+	overflow: hidden !important;
+}
+
+.btn {
+	border: none;
+	background-color: var(--third);
+	padding: 10px 30px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+
+/* navbar */
+.navbar-nav  {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+}
+
+.navbar-toggler {
+	display: none;
+	position: absolute;
+	z-index: 5;
+	right: 0;
+	top: 0;
+	margin: 20px;
+}
+
+.navbar-toggler i {
+	font-size: 30px;
+}
+
+.navbar-brand {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-brand-txt a {
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+
+.navs {
+	display: flex;
+	align-items: center;
+}
+
+.navs .navs-item {
+	margin: 0px 10px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.navs .navs-item a {
+	font-size: 14px;
+	color: var(--secondary-disabled);
+}
+
+.navs .navs-item a:hover {
+	color: var(--secondary);
+}
+
+.navs .navs-item a button {
+	font-size: 14px;
+}
+
+.navs .navs-item.notbtn {
+	margin: 0px 10px;
+	transition: 0.3s;
+	padding: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.navs .navs-item.notbtn:hover {
+	/*transform: scale(1.1);*/
+	font-weight: bold;
+	background-color: #11A8FF;
+}
+.navs .navs-item.notbtn:focus {
+	/*transform: scale(1.1);*/
+	font-weight: bold;
+	background-color: #11A8FF;
+	border-radius: 4px;	
+}
+
+.navs-item .btn {
+	font-weight: bold;
+}
+/* navbar end */
+
+
+
+/* mobile */
+@media (max-width: 992px) {
+
+	/* navbar mobile version */
+	.navbar-toggler {
+		display: block;
+	}
+
+	.navs {
+		flex-direction: column;
+		background-color: var(--primary-disabled);
+		transform: translateX(110%);
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		transition: 1s;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navs.on {
+		transform: translateX(0%);
+		overflow: hidden;
+	}
+
+	.navs .navs-item {
+		width: 100%;
+		text-align: center;
+		margin: 10px 0px;
+	}
+
+	.navs-item a button {
+		width: 100%;
+	}
+}
+
+
+</style>

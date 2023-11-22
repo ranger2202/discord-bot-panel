@@ -1,0 +1,43 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add your head content here if needed -->
+</head>
+<body class="on">
+    <div class="loading" id="loading-box">
+        <div class="loading-item"><div class="loading-progress"></div></div>
+    </div>
+
+    <main class="main">
+        <!-- navbar -->
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar-nav">
+                    <div class="navbar-brand">
+                        <img src="https://cdn.discordapp.com/attachments/1176631274702639195/1176889250051014776/image.png?ex=65708286&is=655e0d86&hm=b0c052452eddd833430acfb11ebfdfc37560102e325710f8d133e57f570f1a1a&" alt="Logo">
+                        <span class="navbar-brand-txt"><a class="txt-bold type-1" href="/">Spyro</a></span>
+                    </div>
+                    <div class="navs" id="navs">
+                        <!-- Add your navigation items here -->
+                        <div class="navs-item notbtn"><a href="#" class="txt-uppercase">Home</a></div>
+                        <div class="navs-item notbtn"><a href="#" class="txt-uppercase">Support</a></div>    
+                        <div class="navs-item notbtn"><a href="#" class="txt-uppercase">Invite</a></div>
+                        <div class="navs-item notbtn"><a href="/dashboard" class="txt-uppercase">Dashboard</a></div>
+                        <!-- Add the user avatar display here -->
+                        <div class="navs-item">
+                            {% if user %}
+                                <img src="{{ user.avatar_url }}" alt="User Avatar" class="user-avatar">
+                            {% else %}
+                                <a href="/login"><button class="btn txt-uppercase shadow-sm">Login</button></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- navbar end -->
+        <script type="text/javascript" src="./js/script.js"></script>
+    </main>
+</body>
+</html>

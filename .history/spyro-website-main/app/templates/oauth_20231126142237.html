@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Spyro</title>
+    <link rel="stylesheet" href="./../static/oauth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-contact">
+        <div class="wrap-contact">
+            <span class="contact-form-title">Logged in as Discord user</span>
+            <h4>Logged in as Discord user: {{ user.username }}#{{ user.discriminator }}</h4>
+            
+            {% if user.avatar_url %}
+                <img src="{{ user.avatar_url }}" alt="Discord Avatar">
+            {% endif %}
+
+            <!-- Display Roblox profile information if available -->
+            {% if roblox_profile %}
+            <!-- Add this inside your "oauth.html" file where you want the profile image to appear -->
+                <div class="profile-image"></div>
+
+                <h4>Roblox Profile: {{ roblox_profile.username }}</h4>
+            {% else %}
+                <h4>No linked Roblox profile</h4>
+            {% endif %}
+
+            <button onclick="window.location.href='/'"">Go Back</button>
+        </div>
+    </div>
+</body>
+</html>

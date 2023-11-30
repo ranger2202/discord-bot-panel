@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Spyro</title>
+    <link rel="stylesheet" href="./../static/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img class="navlogo" src="./../static/images/spyrowhite.svg" alt="spyro.svg">
+            <h3>Spyro</h3>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Invite</a></li>
+        </ul>
+        {% if user %}
+            <div class="dropdown">
+                <button onclick="dropdown()" class="dropbtn"><div class="navs-item notbtn"><img class="avatar-img" src="{{ user.avatar_url }}" alt="Avatar" /></div></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/robloxlink">Link Roblox</a>
+                    <a href="/dashboard">Dashboard</a>
+                    <a href="/adminpanel">Admin Panel</a>
+                    <a href="/logout">Logout</a>
+                 </div>
+            </div>
+        {% else %}
+            <a href="/login"><button class="login-button">Login</button></a>
+        {% endif %}
+    </div>
+    <div class="content">
+        <div class="top">
+            <p class="text-top">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+            <img class="content-logo" src="./../static/images/spyrowhite.svg" alt="spyro.svg">
+        </div>
+        <div class="bottom">
+            <button class="button add">Add To Server</button>
+            <button class="button dashboard">Dashboard</button>
+        </div>
+    </div>
+    <div class="features-box">
+		<h4 class="features-t" id="features">Upgrade to Spyro to get the following features.</h4>
+		<div class="container">
+			<div class="features">
+				<div class="feature">
+					<img class="feature-img" src="./img/feature1.svg"></img>
+					<div class="feature-info">
+						<h2 class="feature-info-t">Shift-Logging</h2>
+						<p class="feature-info-d">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+					</div>
+				</div>
+				<div class="feature">
+					<img class="feature-img" src="./img/feature2.svg"></img>
+					<div class="feature-info">
+						<h2 class="feature-info-t">Lorem ipsum</h2>
+						<p class="feature-info-d">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+					</div>
+				</div>
+				<div class="feature">
+					<img class="feature-img" src="./img/feature3.svg"></img>
+					<div class="feature-info">
+						<h2 class="feature-info-t">Lorem ipsum</h2>
+						<p class="feature-info-d">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="features-box">
+		<h4 class="features-t" id="features">Upgrade to Spyro to get the following features.</h4>
+		<div class="container">
+            <section class="text-gray-600 body-font">
+                <div class="container px-5 py-24 mx-auto">
+                  <h1 style="color: #1DBEF0 ">Thunder<span class="text-white"> Bot Reviews</span></h1>
+                  <div class="flex flex-wrap -m-4">
+                    <div class="p-4 md:w-1/2 w-full">
+                      <div class="h-full bg-gray-100 p-8 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                          <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                        </svg>
+                        <p class="leading-relaxed mb-6">San Andreas  is Founded by Dre! A strict roleplaying community for only those willing to take RP to the next Level! With multiple departments and multiple chances to get the best out of roleplay. We hope to see you in our community!</p>
+                        <a class="inline-flex items-center">
+                          <img alt="testimonial" src="https://cdn.discordapp.com/attachments/1146563092352864378/1146614769969795144/SARP_-_Breast_Cancer_Awareness.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                          <span class="flex-grow flex flex-col pl-4">
+                            <span class="title-font font-medium text-gray-900">San Andrea's County Roleplay</span>
+                            <span class="text-gray-500 text-sm">Christian - Owner</span>
+                            
+                            <div class="buy-button hide-mobile" style="padding-right: 0.25em">
+                                <a href="https://discord.gg/sacrp1" target="_blank" class="btn btn-outline-primary">Join Server</a>
+                            <br>
+                        
+                            </div>
+                          </span>
+                        </a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+<footer>
+    Copyright © 2023
+</footer>
+</html>
+
+
+<script>
+    function dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+
+</script>

@@ -8,9 +8,6 @@ import json
 import base64
 import requests
 import quart_discord
-from roblox import Client
-
-client = Client()
 
 app = Quart(__name__)
 app.config["SECRET_KEY"] = "2424242424"
@@ -21,7 +18,7 @@ app.config["ROBLOX_CLIENT_ID"] = "6841966900709651411"
 app.config["ROBLOX_CLIENT_SECRET"] = "RBX-3TM2HZggakGl-47YSbs2tspB_0PMi5Axy7F26_T60a2Zs_ZXpSXGaas08Egra3mo"
 app.config["ROBLOX_REDIRECT_URI"] = "http://localhost:8000/callback/roblox"
 
-ipc = Client()
+ipc = Client(host="bot ip.", secret_key="Ph29G1ghT", multicast_port=5001)
 discord = DiscordOAuth2Session(app)
 
 @app.route("/")
@@ -83,13 +80,6 @@ async def roblox_callback():
         "client_secret": app.config["ROBLOX_CLIENT_SECRET"],
         "redirect_uri": app.config["ROBLOX_REDIRECT_URI"]
     }
-    user = await discord.fetch_user()
-    session["discord_user"] = {
-        "id": user.id,
-        "username": user.name,
-        "discriminator": user.discriminator,
-        "avatar_url": str(user.avatar_url) if user.avatar_url else None
-    }
     r = requests.post("https://apis.roblox.com/oauth/v1/token", data=data)
     r.raise_for_status()
     response = r.json()
@@ -99,16 +89,9 @@ async def roblox_callback():
     claims_string = claims_bytes.decode('utf-8')
     claims = json.loads(claims_string)
     id = claims['sub']
-    user = await client.get_user(id)
-    print(user)
-    user = await discord.fetch_user()
-    session["discord_user"] = {
-        "id": user.id,
-        "username": user.name,
-        "discriminator": user.discriminator,
-        "avatar_url": str(user.avatar_url) if user.avatar_url else None
-    }
-    return await render_template("oauth.html", user=session["discord_user"])
+    
+    # Redirect to the "oauth.html" page
+    return redirect(url_for("oauth_page"))
    
 @app.route("/oauth")
 async def oauth_page():

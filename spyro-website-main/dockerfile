@@ -8,4 +8,4 @@ EXPOSE 8000
 
 COPY . / 
 
-CMD ["hypercorn", "run:app", "-b", "0.0.0.0:8000"]
+CMD ["hypercorn", "run:app", "-b", "https://spyro-dashboard-beta.7efgeo.easypanel.host/"]

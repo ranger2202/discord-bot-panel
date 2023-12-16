@@ -1,0 +1,21 @@
+.main-servers{
+    display: flex;
+    justify-content: center;
+}
+.server-container{
+    display: flex;
+    justify-content: center;
+}
+.server-content{
+    display: flex;
+    justify-content: center;
+    background: #313131;
+    width: 450px;
+    height: 300px;
+    border-radius: 15px;
+}
+.h2-server-name{
+    display: flex;
+    justify-content: center;
+
+}

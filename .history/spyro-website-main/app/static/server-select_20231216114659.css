@@ -1,0 +1,41 @@
+.main-servers {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make the container full height of the viewport */
+}
+
+.server-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+}
+
+.server-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    background: #313131;
+    width: 450px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.h2-server-name {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin-bottom: 400px;
+    padding-left: 150px;
+    width: 100%;
+}
+
+.server-img {
+    display: flex;
+    border-radius: 100%;
+    margin-right: 100px ;
+    background: #D9D9D9;
+    height: 200px;
+    width: 200px;
+    /* Remove margin properties to center horizontally and vertically */
+}

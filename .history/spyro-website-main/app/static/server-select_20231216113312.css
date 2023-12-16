@@ -1,0 +1,17 @@
+.main-servers{
+    display: flex;
+    justify-content: center;
+}
+.server-container{
+    display: flex;
+    justify-content: center;
+}
+.server-content{
+    display: flex;
+    justify-content: center;
+    background: #313131;
+    width: 450px;
+    height: 200px;
+    border-radius: 15px;
+
+}

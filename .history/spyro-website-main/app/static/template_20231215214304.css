@@ -1,0 +1,152 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Global Styles */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 80%;
+}
+
+.navbar {
+    background-color: #000;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    width: 50px;
+	padding-right: 600px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    margin-right: 20px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.avatar-img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.login-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #0095F0;
+    background-color: transparent;
+}
+.login {
+	width: 100;
+}
+
+/* Main Hero Section */
+.main-hero {
+    background-color: #000;
+    color: white;
+    padding: 8% 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.h2-hero {
+    font-size: 40px;
+    margin-bottom: 6%;
+}
+
+.p-hero {
+    margin-bottom: 6%;
+}
+
+.button {
+    padding: 8px 25px;
+    border: 1px solid white;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    border: 1px solid black;
+    background-color: #fff;
+    color: black;
+}
+
+/* Mobile CSS */
+@media screen and (max-width: 999px) {
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        z-index: 1000;
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .nav-link {
+        margin: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero-content {
+        max-width: 90%;
+    }
+
+    .h2-hero {
+        font-size: 30px;
+        margin-bottom: 10%;
+    }
+
+    .p-hero {
+        margin-bottom: 18%;
+    }
+}

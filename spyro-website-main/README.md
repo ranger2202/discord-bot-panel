@@ -1,2 +1,2 @@
-# spyro-website
+# wavey-website
 simpl;e

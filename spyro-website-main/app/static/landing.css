@@ -1,10 +1,10 @@
-html,
+html, 
 body {
-    background: #000;
-    color:white;
-    padding:0;
-    margin:0;
-    font-family: Poppins, sans-serif;
+    background: linear-gradient(to bottom, #000 60%, #43AC7B);
+    color: white;
+    padding: 10;
+    margin: 10;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -16,10 +16,10 @@ body {
 
 .invite-button {
     padding:8px 25px;
-    border:1px solid white;
     background-color: #43AC7B;
     color:white;
     text-decoration:none;
+    margin-right: 20px;
     border-radius: 100px;
 }
 .support-button {
@@ -30,6 +30,7 @@ body {
     border-color: #43AC7B;
     text-decoration:none;
     border-radius: 100px;
+    margin-right: 40px;
 }
 .button:hover {
     border:1px solid black;
@@ -41,19 +42,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; 
-    /* Add this line to horizontally center the links */
 }
 
 .nav-list {
     list-style: none;
     display: flex;
     padding: 0;
-    justify-content: center; /* Add this line to horizontally center the links */
+    justify-content: center;
 }
 
 .navbar {
     padding-bottom: 5px;
-    margin-right: 40px;/* Adjust this value to move the navbar up */
+    margin-right: 40px;
 }
 
 .nav-link a {
@@ -63,7 +63,7 @@ body {
 }
 
 .nav-link a:hover {
-    color:#b3b3b3;
+    color:#43AC7B;
 }
 
 .brand {
@@ -76,16 +76,9 @@ body {
     margin-bottom: 40px;
 }
 
-.hamburger { 
-    display:none;
-}
 
-.hamburger.active + .navigation .nav-list {
-    display: flex;
-}
 
 .main-hero {
-    padding-top:8%;
     padding-bottom:8%;
     width:100%;
     text-align: center;
@@ -124,22 +117,26 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #111;
   margin-left: 455px;
   margin-bottom:110%;
+  border-radius: 15px;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 15px 15px 16px 15px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  color: #fff;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+    background-color: #312d2d;
+    border-radius: 15px;
+}
 
 .show {display:block;}
 
@@ -153,15 +150,15 @@ body {
 
 
 .login-button{
-    width: 80px;
+    width: 100px;
     border-radius: 50%;
     margin-right: 1rem;
-    margin-left: 500px;
+    margin-left: 440px;
     margin-bottom: 10px;
     font: poppins;
     height: 2.5rem;
-    border-color: #ddd;
-    border-radius: 10px;
+    border: none;
+    border-radius: 30px;
     font-weight: 700;
     color: #fff;
     background: #43AC7B;
@@ -174,58 +171,153 @@ body {
     color: #fff;
     font-size: 20px;
 }
+
+.footer-h2{
+    text-decoration: underline;
+}
+.footer-container {
+    display: flex;
+    align-items: center;
+    margin-right: 300px;
+    margin-bottom: 50px;
+}
+.footer-container-1{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.footer-logo img {
+    margin-right: 900px;
+    margin-bottom: 50px;
+}
+
+.wavey-footer-list,
+.other-footer-list {
+    list-style: none;
+    
+}
+.footer-link a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer-link-wavey a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    margin-top: 250px;
+    max-width: 4124px;
+    height: 200px;
+    margin-top: 50%;
+    background: #121212;
+    color: white;
+}
+
+.footer-link,
+.footer-link-wavey {
+    font-size: 16px; 
+    margin-right: 50px; 
+}
+
+.footer-link-wavey {
+    margin-right: 30px; 
+}
+
+.footer-copyright{
+    font-size: 15px;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
 /* Mobile CSS */
 @media screen and (max-width: 999px) {
+    .hamburger {
+        display: block;
+    }
+
     .nav-list {
-        display: none; 
+        display: none;
+        flex-direction: column;
         position: absolute;
-        top: 80px; 
+        top: 60px;
         left: 0;
         width: 100%;
         background: #000;
-        z-index: 1000;
-        flex-direction: column;
-        height:80%;
     }
 
     .nav-link {
-        padding: 10px;
-        text-align: left;
-        padding-left:10%;
-        border-bottom:0.5px solid white;
+        padding: 15px;
+        text-align: center;
+        background: #000;
     }
 
     .nav-link a {
-        padding: 10px 0;
-        display: block;
-        color: white; 
-    }
-
-    .hamburger {
-        display: block;
         color: white;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
+        text-decoration: none;
     }
 
-    .hamburger:focus {
-        outline: none;
+    .hamburger:focus + .navigation .nav-list {
+        display: flex;
     }
-    .nav-list {
-        display: none; 
-    }
+
+
     .hero-content {
-        width:100%;
-        max-width:90%;
+        width: 100%;
+        max-width: 90%;
     }
+
     .h2-hero {
-        font-size:40px;
-        margin-bottom:10%;
+        font-size: 40px;
+        margin-bottom: 10%;
     }
-    
+
     .p-hero {
-        margin-bottom:18%;
+        margin-bottom: 18%;
+    }
+
+    .avatar-img,
+    .login-button {
+        margin-left: 10px; 
+    }
+
+    .footer-container,
+    .footer-container-1 {
+        margin-right: 10px; 
+    }
+
+    .footer-logo img {
+        margin-right: 10px; 
+    }
+
+    .footer {
+        margin-top: 50px; 
+    }
+
+    .footer-link,
+    .footer-link-wavey {
+        font-size: 14px; 
+        margin-right: 20px;
+    }
+
+    .footer-link-wavey {
+        margin-right: 10px; 
     }
 }

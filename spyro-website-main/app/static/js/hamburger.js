@@ -1,4 +1,8 @@
-function toggleMenu() {
+document.addEventListener("DOMContentLoaded", function () {
+  var hamburger = document.querySelector('.hamburger');
   var navList = document.querySelector('.nav-list');
-  navList.classList.toggle('show');
-}
+
+  hamburger.addEventListener('click', function () {
+      navList.style.display = (navList.style.display === 'flex') ? 'none' : 'flex';
+  });
+});

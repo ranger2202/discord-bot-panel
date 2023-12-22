@@ -1,0 +1,113 @@
+.main-servers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    padding: 10px;
+}
+
+.server-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px; 
+}
+
+.server-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #313131;
+    max-width: 450px;
+    max-height: 350px;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.server-info {
+    margin-bottom: 10px;
+}
+
+.h2-server-name {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.server-img {
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.dashboard-button {
+    justify-content: center;
+    width: 150px;
+    margin-top: 50px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background: #3FB57F;
+    
+}
+
+.dashboard-button a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font: poppins;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.mod-panel-button {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    background: #525252;
+    border: none;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.mod-panel-button a {
+    display: flex;
+    margin-top: 15px;
+    font: poppins;
+    font-size: 15px;
+    font-weight: 700;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.dashboard-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 550px;
+}
+
+.header-hero {
+    display: flex;
+    justify-content: center;
+}
+.server-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+    .server-info {
+        text-align: center; 
+    }
+
+    .dashboard-buttons {
+        flex-direction: column;
+    }
+}

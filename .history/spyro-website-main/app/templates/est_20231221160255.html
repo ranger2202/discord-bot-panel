@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Config</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/ticketconfig.css')}}">
+</head>
+<body>
+    <h1>Ticket Config</h1>
+    <input type="hidden" id="guild_id" value="{{guild.id}}">
+
+    <div class="dropdown">
+        <label for="panel-channel-dropdown">Panel Channel:</label>
+        <select id="panel-channel-dropdown"></select>
+    </div>
+
+    <div class="dropdown">
+        <label for="tickets-category-dropdown">Tickets Category:</label>
+        <select id="tickets-category-dropdown"></select>
+    </div>
+
+    <div class="dropdown">
+        <label for="transcript-channel-dropdown">Transcript Channel:</label>
+        <select id="transcript-channel-dropdown"></select>
+    </div>
+    
+    <div class="text-input">
+        <label for="panel-message-input">Panel Message:</label>
+        <textarea id="panel-message-input" cols="30" rows="10" minlength="1" maxlength="4096"></textarea>
+    </div>
+
+    <button id="SaveButton">Save</button>    
+</body>
+<script>
+    const button = document.getElementById("SaveButton");
+
+    button.addEventListener("click", function() {
+        const PanelChannelSelect = document.getElementById("panel-channel-dropdown");
+        const PanelChannel = PanelChannelSelect.value;
+
+        const TicketCategoryDropdown = document.getElementById("tickets-category-dropdown");
+        const TicketCategory = TicketCategoryDropdown.value;
+
+        const TranscriptChannelDropdown = document.getElementById("transcript-channel-dropdown");
+        const TranscriptChannel = TranscriptChannelDropdown.value;      
+
+        const PanelMessageInput = document.getElementById("panel-message-input");
+        const PanelMessage = PanelMessageInput.value;
+
+        const GuildID = document.getElementById("guild_id").value;
+
+        const data = {
+            guild_id: GuildID,
+            panel_channel: PanelChannel,
+            ticket_category: TicketCategory,
+            transcript_channel: TranscriptChannel,
+            panel_message: PanelMessage,
+        };
+
+        fetch("/save_ticket_config", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+        .then((response) => response.json()).then((responseData) => {
+            if (responseData.message === "success") {
+                alert("Ticket Config Saved.");
+            }
+            else {
+                alert(responseData.message);
+            }
+        })
+        .catch((error) => {
+            console.log("Error:", error);
+            alert("Unable to save config, try again later.")
+        })
+
+    })
+
+    function populateSelectOptions(selectId, selectData, selectedValue) {
+            const selectElement = document.getElementById(selectId);
+
+            selectElement.innerHTML = '';
+
+            selectData.forEach((item) => {
+                const option = document.createElement('option');
+                option.value = item.id;
+                option.textContent = item.name;
+
+                if (item.id === selectedValue) {
+                    option.selected = true;
+                }
+
+                selectElement.appendChild(option);
+            });
+        }
+
+    const ChannelData = JSON.parse('{{guild.channels|tojson}}');
+    const CategoryData = JSON.parse('{{guild.categories|tojson}}');
+    const RoleData = JSON.parse('{{guild.roles|tojson}}');
+
+    populateSelectOptions("panel-channel-dropdown", ChannelData, "{{config.panel_channel}}");
+    populateSelectOptions("tickets-category-dropdown", CategoryData, "{{config.ticket_category}}");
+    populateSelectOptions("transcript-channel-dropdown", ChannelData, "{{config.transcript_channel}}");
+
+</script>
+</html>

@@ -1,6 +1,0 @@
-hypercorn
-quart
-quart_discord
-discord.ext.ipc
-roblox
-roblox

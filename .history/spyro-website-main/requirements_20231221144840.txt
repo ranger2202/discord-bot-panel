@@ -1,9 +1,0 @@
-hypercorn
-quart
-quart_discord
-discord.ext.ipc
-<<<<<<< HEAD
-roblox
-=======
-roblox
->>>>>>> 826bcbbc392637c21a9a5e13afc03a62d08725af

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Discord Bot Starter</title>
+</head>
+<body>
+    <section>
+    <h1 class="bot-header">Start Bot</h1>
+    <div class="bot-token">
+        <input class="bot-token-password" type="password" id="token" placeholder="Enter your bot token">
+    </div>
+    
+    <div id="startButtonContainer" class="start-button">
+        <button class="start-button" onclick="startBot()">Start Bot</button>
+    </div>
+    
+    <div id="stopButtonContainer" class="stop-button" style="display: none;">
+        <button class="stop-button" onclick="stopBot()">Stop Bot</button>
+    </div>
+    
+    <form id="commandForm">
+        <label for="commandName">Name your command:</label>
+        <input type="text" id="commandName" placeholder="Enter command name" required>
+        
+        <label for="commandResponse">Command response:</label>
+        <input type="text" id="commandResponse" placeholder="Enter command response" required>
+        
+        <button type="button" onclick="makeCommand()">Make a Command</button>
+    </form>
+
+    <script type="text/javascript" src="./../static/js/app.js"></script>
+</body>
+</html>
